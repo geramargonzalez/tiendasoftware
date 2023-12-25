@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 function ItemListContainer({saludo, despedida}) {
 
     return (
+        
         <div>
             <div class="welcome-text">
             <p>Bienvenido a e-commerce de Gerardo Gonzalez</p>

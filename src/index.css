@@ -42,7 +42,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 50vh; /* Altura mínima para llenar la pantalla */
+  min-height: 50vh;
 }
 
 .welcome-text {

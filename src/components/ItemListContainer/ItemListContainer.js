@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function ItemListContainer({saludo, despedida}) {
+function ItemListContainer() {
 
     return (
         
@@ -16,9 +16,5 @@ function ItemListContainer({saludo, despedida}) {
         )
 }
 
-ItemListContainer.propTypes = {
-    saludo: PropTypes.string.isRequired,
-    despedida: PropTypes.string.isRequired
-};
 
 export default ItemListContainer;

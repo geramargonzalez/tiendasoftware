@@ -5,11 +5,11 @@ import CartWidget from './components/CardWidget/CartWidget';
 function App() {
   return (
     <>
-    <ItemListContainer saludo='Hello there'>
-  
+    <ItemListContainer>
+
     </ItemListContainer>
 
-    <CartWidget bodyCart=''></CartWidget>
+    <CartWidget></CartWidget>
 
     </>
   );

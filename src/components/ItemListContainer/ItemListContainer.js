@@ -1,20 +1,37 @@
-import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { getProductsAsync } from '../../Utils/MockData'
+import ItemList from '../ItemList/ItemList'
+import Spinner from '../Spinner/Spinner'
 
-function ItemListContainer() {
+const ItemListContainer = () => {
+  const [items, setItems] = useState([])
+  const [loading, setLoading] = useState(true)
+  const { categoryId } = useParams()
 
-    return (
-        
-        <div>
-            <div class="welcome-text">
-            <p>Bienvenido a e-commerce de Gerardo Gonzalez</p>
-            </div>
-            <div class="lorem-ipsum">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit varius mauris, vel interdum lorem consequat at. Donec luctus lectus in lorem tincidunt, vitae pharetra odio tristique.</p>
-                <p>Nullam ultrices ex vel justo molestie condimentum. Duis nec magna nec nulla dictum tincidunt. Aliquam vel augue vitae ligula eleifend ultricies a nec ligula.</p>
-            </div>
-        </div>
+  useEffect(() => {
+    getProductsAsync().then((products) => {
+      if (categoryId) {
+        const filteredProducts = products.filter(
+          (product) => product.category === categoryId
         )
+        setItems(filteredProducts)
+      } else {
+        setItems(products)
+        setLoading(false)
+      }
+    })
+  }, [categoryId])
+
+  return loading ? (
+    <Spinner />
+  ) : (
+    <>
+      <ItemList itemList={items} />
+    </>
+  )
 }
 
+ItemListContainer.propTypes = {}
 
-export default ItemListContainer;
+export default ItemListContainer

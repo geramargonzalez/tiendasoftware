@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
+import styles from './ItemCount.module.scss'
 
 const ItemCount = ({ onAdd }) => {
   const [count, setCount] = useState(1)
@@ -10,7 +11,7 @@ const ItemCount = ({ onAdd }) => {
 
   return (
     <div>
-      <div>
+      <div >
         <input
           type='button'
           value='-'
@@ -28,7 +29,9 @@ const ItemCount = ({ onAdd }) => {
       <input
         type='button'
         value='Agregar al carrito'
-        onClick={() => onAdd(count)}
+        onClick={() => onAdd(count)
+        
+       }
       />
     </div>
   )

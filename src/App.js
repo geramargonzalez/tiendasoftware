@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './components/Home/Home'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './components/ItemDetail/ItemDetail'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import Navbar from './components/Navbar/Navbar'
 import PageNotFound from './components/PageNotFound/PageNotFound'
 

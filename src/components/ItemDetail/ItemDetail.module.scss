@@ -3,15 +3,48 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #ccc;
-    width: 250px;
-    height: 300px;
+    border: 1px solid #088356;
+    width: 600px;
+    height: 600%;
     border-radius: 15px;
     padding: 10px;
     margin: auto;
+    margin-top: 30px;
   }
   
   img {
     width: 100px;
   }
   
+  .button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .item__info__title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #4CAF50;
+  }
+
+  .item__info__description {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+  }
+
+  .item__info__price {
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    color: #088356;
+    font-size: 40px;
+    padding-left: 0;
+    margin-bottom: 30px;
+    font-family: 'Lato';
+  }

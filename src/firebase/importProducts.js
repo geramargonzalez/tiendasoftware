@@ -1,6 +1,5 @@
 import { db } from './config'
 import { collection, addDoc } from 'firebase/firestore'
-// import { products } from '../utils/MockData.js'
 
 export const importProducts = async () => {
   fetch(`https://fakestoreapi.com/products/`)

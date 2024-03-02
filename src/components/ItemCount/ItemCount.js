@@ -1,40 +1,39 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react'
-import styles from './ItemCount.module.scss'
+import { useState } from 'react';
+import styles from './ItemCount.module.scss';
 
 const ItemCount = ({ onAdd }) => {
-  const [count, setCount] = useState(1)
+    const [count, setCount] = useState(1);
 
-  const onChangeHandler = (event) => {
-    setCount(Number(event.target.value))
-  }
+    const onChangeHandler = (event) => {
+        setCount(Number(event.target.value));
+    };
 
-  return (
-    <div>
-      <div >
-        <input
-          type='button'
-          value='-'
-          onClick={() =>
-            count > 1 ? setCount(count - 1) : alert('No se puede')
-          }
-        />
-        <input type='number' value={count} onChange={onChangeHandler} />
-        <input
-          type='button'
-          value='+'
-          onClick={() => count < 99 && setCount(count + 1)}
-        />
-      </div>
-      <input
-        type='button'
-        value='Agregar al carrito'
-        onClick={() => onAdd(count)
+    return (
+        <div>
+            <div >
+                <input
+                    type='button' value='-'
+                    onClick={() =>
+                        count > 1 ? setCount(count - 1) : alert('No se puede')
+                    }
+                />
+                <input type='number' value={count} onChange={onChangeHandler} />
+                <input
+                    type='button'
+                    value='+'
+                    onClick={() => count < 99 && setCount(count + 1)}
+                />
+            </div>
+            <input
+                type='button'
+                value='Agregar al carrito'
+                onClick={() => onAdd(count)
         
-       }
-      />
-    </div>
-  )
-}
+                }
+            />
+        </div>
+    );
+};
 
-export default ItemCount
+export default ItemCount;

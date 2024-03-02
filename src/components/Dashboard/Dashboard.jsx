@@ -1,17 +1,18 @@
-import PropTypes from 'prop-types'
-import Navbar from '../Navbar/Navbar'
+/* eslint-disable no-unused-vars */
+import PropTypes from 'prop-types';
+import Navbar from '../Navbar/Navbar';
 
 const Dashboard = ({ children }) => {
-  return (
-    <div>
-      <Navbar />
-      <div>{children} </div>
-    </div>
-  )
-}
+    return (
+        <div>
+            <Navbar />
+            <div>{children} </div>
+        </div>
+    );
+};
 
 Dashboard.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+    children: PropTypes.node.isRequired
+};
 
-export default Dashboard
+export default Dashboard;

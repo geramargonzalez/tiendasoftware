@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styles from './ItemDetail.module.scss';
 import ItemCount from '../ItemCount/ItemCount';
 import { useCartContext } from '../../routing/context/cartContext';
@@ -25,7 +26,7 @@ const ItemDetail = ({ item }) => {
                 <p className={styles.item__info__description}>{category}</p>
             </div>
             <ItemCount onAdd={onAdd} />
-            
+
         </div>
     );
 };
